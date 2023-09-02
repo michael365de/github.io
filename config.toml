@@ -2,6 +2,7 @@ baseurl = "https://michael365de.github.io"
 DefaultContentLanguage = "en"
 title = "Michael365"
 theme = "beautifulhugo"
+publishDir = "docs"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true

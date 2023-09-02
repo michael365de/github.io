@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Michael365</title>
+    <link>https://michael365de.github.io/post/</link>
+    <description>Recent content in Posts on Michael365</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>mail@michael365.de (Michael Pucknat)</managingEditor>
+    <webMaster>mail@michael365.de (Michael Pucknat)</webMaster>
+    <lastBuildDate>Sat, 02 Sep 2023 01:33:43 +0200</lastBuildDate><atom:link href="https://michael365de.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Learning C# - My journey from low-code to mo-code</title>
+      <link>https://michael365de.github.io/post/learning-csharp-part1/</link>
+      <pubDate>Sat, 02 Sep 2023 01:33:43 +0200</pubDate>
+      <author>mail@michael365.de (Michael Pucknat)</author>
+      <guid>https://michael365de.github.io/post/learning-csharp-part1/</guid>
+      <description>So it begins I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right mood to start out seriosly. Then I stumbled over this Tweet by Scott Hanselmann :
+I really like freecodecamp.org and tried it last year to learn some javascript. In combination with content from Microsoft Learn this seems like a great way to finally start digging into C#.</description>
+    </item>
+    
+  </channel>
+</rss>
