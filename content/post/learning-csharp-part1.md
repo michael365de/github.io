@@ -8,7 +8,7 @@ draft: false
 ### So it begins ###
 
 I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right
-mood to start out seriosly.
+mood to start out seriously.
 Then I stumbled over this Tweet by Scott Hanselmann :
 
 ![tweet](/img/tweet_hanselman_csharp.png)
