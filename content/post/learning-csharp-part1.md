@@ -17,7 +17,13 @@ I really like [freecodecamp.org](https://www.freecodecamp.org/) and tried it las
 
 The first module starts out with the basics like variables and string formatting. It was nice to work through it interactive in a browser session. Everything was well explained and there was a guided project to put all things learned together and build a console application to calculate student grades.
 
+## Here are my key takeaways from this first module ##
+
+
+![notes](/img/notescsharp01.PNG)
+
 After two evenings and about 5 hours I have now completed the first of seven modules and earned my first badge :-)
+I will write about my experience with the other modules after I have completed them.
 
 If you are eager to learn C#, then this is a great course to get started.
 

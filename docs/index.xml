@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Michael365</title>
+    <title></title>
     <link>https://michael365de.github.io/</link>
-    <description>Recent content on Michael365</description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mail@michael365.de (Michael Pucknat)</managingEditor>
     <webMaster>mail@michael365.de (Michael Pucknat)</webMaster>
@@ -14,8 +14,17 @@
       <pubDate>Sat, 02 Sep 2023 01:33:43 +0200</pubDate>
       <author>mail@michael365.de (Michael Pucknat)</author>
       <guid>https://michael365de.github.io/post/learning-csharp-part1/</guid>
-      <description>So it begins I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right mood to start out seriosly. Then I stumbled over this Tweet by Scott Hanselmann :
+      <description>So it begins I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right mood to start out seriously. Then I stumbled over this Tweet by Scott Hanselmann :
 I really like freecodecamp.org and tried it last year to learn some javascript. In combination with content from Microsoft Learn this seems like a great way to finally start digging into C#.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://michael365de.github.io/post/helloworld/</link>
+      <pubDate>Fri, 01 Sep 2023 08:47:18 +0200</pubDate>
+      <author>mail@michael365.de (Michael Pucknat)</author>
+      <guid>https://michael365de.github.io/post/helloworld/</guid>
+      <description>Hi. This is my blog I decided to start writing about my learnings and share my notes and experience with you. Why ? Because I learned so much from other people´s blogs and videos and I hope that I can give something back this way. You can read the longer story here</description>
     </item>
     
     <item>
