@@ -5,7 +5,7 @@ draft: false
 
 ---
 
-### So it begins ###
+### So it begins... ###
 
 I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right
 mood to start out seriously.
@@ -24,6 +24,9 @@ The first module starts out with the basics like variables and string formatting
 
 After two evenings and about 5 hours I have now completed the first of seven modules and earned my first badge :-)
 I will write about my experience with the other modules after I have completed them.
+
+It´s fun to learn this language and I think it will be valuable skill that expands my capabilities to build solutions
+outside of (or next to) PowerApps.
 
 If you are eager to learn C#, then this is a great course to get started.
 
