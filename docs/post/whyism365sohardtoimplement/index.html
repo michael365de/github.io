@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Why is M365 so hard to implement the &#34;right way&#34; ? - Michael Pucknat</title>
+
+  <meta name="description" content="Today I stumbled across the following tweet:
+In the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise environments with several thousand employees from on-premise to M365. Rarely did I have the chance to start from scratch. Most of the time, there was already an existing structure on-premise, or only a part was already used in M365.">
+  <meta name="author" content="Michael Pucknat"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "",
+    
+    "url": "https:\/\/michael365de.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/michael365de.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/michael365de.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/michael365de.github.io\/post\/whyism365sohardtoimplement\/",
+          "name": "Why is m365 so hard to implement the \u0022right way\u0022 ?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Michael Pucknat"
+  },
+  "headline": "Why is M365 so hard to implement the \u0022right way\u0022 ?",
+  "description" : "Today I stumbled across the following tweet:\nIn the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise environments with several thousand employees from on-premise to M365. Rarely did I have the chance to start from scratch. Most of the time, there was already an existing structure on-premise, or only a part was already used in M365.",
+  "inLanguage" : "en",
+  "wordCount":  1419 ,
+  "datePublished" : "2023-09-06T23:36:50",
+  "dateModified" : "2023-09-06T23:36:50",
+  "image" : "https:\/\/michael365de.github.io\/img\/me.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/michael365de.github.io\/post\/whyism365sohardtoimplement\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/michael365de.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/michael365de.github.io\/img\/me.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Why is M365 so hard to implement the &#34;right way&#34; ?" />
+<meta property="og:description" content="Today I stumbled across the following tweet:
+In the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise environments with several thousand employees from on-premise to M365. Rarely did I have the chance to start from scratch. Most of the time, there was already an existing structure on-premise, or only a part was already used in M365.">
+<meta property="og:image" content="https://michael365de.github.io/img/me.png" />
+<meta property="og:url" content="https://michael365de.github.io/post/whyism365sohardtoimplement/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="" />
+
+  <meta name="twitter:title" content="Why is M365 so hard to implement the &#34;right way&#34; ?" />
+  <meta name="twitter:description" content="Today I stumbled across the following tweet:
+In the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise …">
+  <meta name="twitter:image" content="https://michael365de.github.io/img/me.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@@Michael365_de" />
+  <meta name="twitter:creator" content="@@Michael365_de" />
+  <link href='https://michael365de.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.87.0" />
+  <link rel="alternate" href="https://michael365de.github.io/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="https://michael365de.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://michael365de.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://michael365de.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://michael365de.github.io"></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="" href="https://michael365de.github.io">
+            <img class="avatar-img" src="https://michael365de.github.io/img/me.png" alt="" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Why is M365 so hard to implement the &#34;right way&#34; ?</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on September 6, 2023
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1419&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Michael Pucknat
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><strong>Today I stumbled across the following tweet:</strong></p>
+<p><img src="/img/tweet_m365.png" alt="SCREENSHOT"></p>
+<p>In the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise environments with several thousand employees from on-premise to M365.
+Rarely did I have the chance to start from scratch. Most of the time, there was already an existing structure on-premise, or only a part was already used in M365.</p>
+<h2 id="what-i-have-observed-over-the-last-few-years-">What I have observed over the last few years :</h2>
+<p>For those who were already using M365, the following patterns occurred repeatedly :</p>
+<ul>
+<li>
+<p>Often, only Exchange on-premise was migrated to Exchange Online to save costs. The rest was not used.</p>
+</li>
+<li>
+<p>M365 was only used to license the office package.</p>
+</li>
+<li>
+<p>Through COVID, these companies then often still used Teams, since it was already included in the license. Exactly these enterprises had then however quite a proliferation of Teams, channels and content, as the service was deployed &quot;on the fly&quot;.</p>
+</li>
+<li>
+<p>SharePoint was used as cloud storage, but not introduced in a structured way.</p>
+</li>
+<li>
+<p>Users continue to work &quot;as in the old world&quot; / on-premise. Example: Files are sent back and forth umpteen times as attachments.</p>
+</li>
+<li>
+<p>in SharePoint there are deep folder structures, often complete fileshares were packed into a single document library and then synchronized to all clients via OneDrive, so that users do not have to change their way of working.</p>
+</li>
+<li>
+<p>Because of the latter point, many users are dissatisfied, as the synchronization causes problems every now and then.</p>
+</li>
+</ul>
+<h2 id="what-i-often-hear-from-users-from-such-companies-">What I often hear from users from such companies :</h2>
+<ul>
+<li><em>&quot;SharePoint is bad, I can&rsquo;t find anything again and everything was faster and easier on the old file server&quot;</em></li>
+<li><em>&quot;Why should I use Teams when I have an email distribution list ?&quot;</em></li>
+<li><em>&quot;I can also map our KPIs in Excel. My colleague has already built something there&quot;</em></li>
+<li><em>&quot;It&rsquo;s only the office package in the cloud anyway&quot;</em></li>
+<li><em>&quot;And why is that so expensive ?&quot;</em></li>
+</ul>
+<h2 id="what-i-often-hear-from-decision-makers-from-such-companies-">What I often hear from decision makers from such companies :</h2>
+<ul>
+<li><em>&quot;It just had to be done quickly, so we rolled out teams.&quot;</em></li>
+<li><em>&quot;We lack the time and expertise to evaluate what else we can do&quot;</em></li>
+<li><em>&quot;Why do I need all this cloud stuff just for the office suite ?&quot;</em></li>
+<li><em>&quot;We have other software in place for each of our core processes that already does everything, do we need M365 ?&quot;</em></li>
+<li><em>&quot;Our Exchange is now running in the cloud. So we can continue to use it as a file repository without buying on-premise storage. Great success &quot;</em></li>
+</ul>
+<h2 id="what-does-this-mean-for-the-statement-in-the-tweet-">What does this mean for the statement in the tweet ?</h2>
+<p>Looking at my observations and experiences over the last few years, he is right : M365 unfortunately often ends after the migration from Exchange on-premise.
+Probably more often in small businesses than in enterprise environments, but still, at least from what I&rsquo;ve experienced, relatively common.
+Things are resolved via third-party tools, even though tools are already in place via M365. Users create compliance issues as they share files via arbitrary
+file sharing portals with external parties just because they don&rsquo;t know they can already do that securely via their own on-board tools.</p>
+<h2 id="what-can-be-the-reason-for-this-">What can be the reason for this ?</h2>
+<p>Again, opinions will probably vary widely, but I personally think it&rsquo;s because of these factors :</p>
+<ol>
+<li>the customer is not sufficiently informed to know what options he has.</li>
+<li>the IT system house providing support does not have the expertise to provide extensive advice here (probably more common in the small-business segment)</li>
+<li>the customer is not ready or does not have the budget to fully utilize the service.</li>
+<li>the introduction of the services was only considered from a technical point of view.</li>
+</ol>
+<p>In my (humble) experience, it has often been the combination of all three factors when adopting such a construct.
+It has often been helpful to make a rudimentary demo of the most important services, so that the customer is aware of what is included in his license.</p>
+<p>In my personal opinion, the most important factor is often :</p>
+<p><strong>The migration or introduction of M365 is not a pure technology project, but the focus should be on the users.</strong></p>
+<p>This also aligns with Microsoft&rsquo;s mission statement :</p>
+<p><em>&quot;to empower every person and every organization on the planet to achieve more.&quot;</em></p>
+<p>And this is where the cat bites the tail again, as this means that BEFORE we launch services, we first need to understand their way of working to enable them to help us as consultants in the design so that we can provide the best possible solution for them.</p>
+<p>I&rsquo;ve had so many a-ha moments with users in meetings when I&rsquo;ve teased simple services from M365 that they didn&rsquo;t know about before, but directly rated them as very useful and were grateful for the advice.</p>
+<h2 id="am-i-surprised-">Am I surprised ?</h2>
+<p>No, because M365 is an ecosystem with enormously fast growth and frequent changes. Let&rsquo;s be honest, we work with it every day and our focus is on it.
+Nevertheless, it happens again and again that a familiar menu is now in a different admin center, or a service has been renamed (cough&hellip;Entra), or simply a function that has been used for a long time has been discontinued.
+Yes, it&rsquo;s good that the platform is constantly and rapidly evolving.
+This is the cloud as we love it, but it&rsquo;s already hard for me as a consultant to stay on the ball and I can understand that this is almost impossible for &quot;normal&quot; users.</p>
+<h2 id="ok-but-what-can-i-do-">Ok, but what can I do ?</h2>
+<p>Companies and especially users can be so different, but this is why I believe that a successful implementation or migration to M365 is based on (at least those) two things :</p>
+<ul>
+<li>Empowerment of users through training</li>
+<li>After implementation / migration, a continuous process should be established in which new or existing capabilities are regularly evaluated and integrated.</li>
+</ul>
+<h2 id="companies-like-to-save-on-user-training">Companies like to save on user training.</h2>
+<p><em>&quot;Anyone can operate Office&quot;</em> is something we&rsquo;ve probably all heard many times before&hellip;.
+The challenge here is to convince companies that this investment is worthwhile and that they can even use it to create a competitive advantage.
+In the course of introducing M365, I always try to work closely with the departments and to document their way of working in profiles.
+Kind of like setting up personas in marketing, for example. This helps me find the best solution and often results in added value for the company as they otherwise rarely have time in their core business to look at their current processes.
+The process analysis in turn gives impetus to ideas for automation and development of PowerApps prototypes.</p>
+<h2 id="what-helps-me-with-this-">What helps me with this ?</h2>
+<p><strong>There is an incredible number of good resources on the net and the following things have helped me :</strong></p>
+<ul>
+<li>Microsoft offered a &quot;Microsoft Adoption Specialist&quot; certification a few years ago in cooperation with edx.org. I have also taken this and I can highly recommend it to every consultant and IT manager, because it covers the most important aspect for me - the users.
+The course provides ideas and strategies for dealing with users during the introduction and operation of M365.</li>
+</ul>
+<p><a href="https://www.edx.org/learn/computer-programming/microsoft-microsoft-service-adoption-specialist-2">LINK</a></p>
+<ul>
+<li>There is the look book from Microsoft. Here there are SharePoint sample pages that can be easily deployed in existing clients. Either to get started directly
+or for demonstration purposes.</li>
+</ul>
+<p><a href="https://lookbook.microsoft.com/">LINK</a></p>
+<ul>
+<li>Microsoft Adoption.
+Adoption is key and for that Microsoft provides a bunch of information here to help us stay on the ball and empower users. It´s a great resource for materials to support and empower our users.</li>
+</ul>
+<p><a href="https://adoption.microsoft.com">LINK</a></p>
+<ul>
+<li>Aaron Dinnage has created a great page with an overview of all licenses and available services. This makes it easy to find your way through the license jungle, and it is easy to check which services are still usable in existing licenses.</li>
+</ul>
+<p><a href="https://m365maps.com/">LINK</a></p>
+<ul>
+<li>The <strong>awesome</strong> PnP Community provides help, advice and samples for you to use in your projects.</li>
+</ul>
+<p><a href="https://pnp.github.io/">LINK</a></p>
+<p>If I think of any other relevant links, I will add them here. Feel free to send me your favorites via Twitter or mail, so I can include them here. I´m also curious what you think about this topic.</p>
+<p><strong>And above all: Listen to your end users, just as well as to the stakeholders and project sponsors. In the end, they are the ones who know best how work is done and it´s not unusual that this is different from what you read in some SOP documents some manager gave to you.</strong></p>
+<p>Thank you for reading this and have a great day</p>
+<p>Michael</p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f&amp;text=Why%20is%20M365%20so%20hard%20to%20implement%20the%20%22right%20way%22%20%3f&amp;via=%40Michael365_de" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f&amp;title=Why%20is%20M365%20so%20hard%20to%20implement%20the%20%22right%20way%22%20%3f" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f&amp;title=Why%20is%20M365%20so%20hard%20to%20implement%20the%20%22right%20way%22%20%3f" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f&amp;title=Why%20is%20M365%20so%20hard%20to%20implement%20the%20%22right%20way%22%20%3f" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fmichael365de.github.io%2fpost%2fwhyism365sohardtoimplement%2f&amp;description=Why%20is%20M365%20so%20hard%20to%20implement%20the%20%22right%20way%22%20%3f" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://michael365de.github.io/post/learning-csharp-part1/" data-toggle="tooltip" data-placement="top" title="Learning C# - My journey from low-code to mo-code">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:mail@michael365.de" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://twitter.com/@Michael365_de" title="Twitter">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://www.xing.com/profile/username" title="Xing">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://open.spotify.com/user/username" title="Spotify">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-spotify fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Michael Pucknat
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2023
+          
+
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.87.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="https://michael365de.github.io/js/main.js"></script>
+<script src="https://michael365de.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://michael365de.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

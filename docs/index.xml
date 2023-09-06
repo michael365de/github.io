@@ -7,14 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>mail@michael365.de (Michael Pucknat)</managingEditor>
     <webMaster>mail@michael365.de (Michael Pucknat)</webMaster>
-    <lastBuildDate>Sat, 02 Sep 2023 01:33:43 +0200</lastBuildDate><atom:link href="https://michael365de.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 23:36:50 +0200</lastBuildDate><atom:link href="https://michael365de.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why is M365 so hard to implement the &#34;right way&#34; ?</title>
+      <link>https://michael365de.github.io/post/whyism365sohardtoimplement/</link>
+      <pubDate>Wed, 06 Sep 2023 23:36:50 +0200</pubDate>
+      <author>mail@michael365.de (Michael Pucknat)</author>
+      <guid>https://michael365de.github.io/post/whyism365sohardtoimplement/</guid>
+      <description>Today I stumbled across the following tweet:
+In the last few years I have conducted many migration projects in a wide variety of environments, from small and medium-sized companies to enterprise environments with several thousand employees from on-premise to M365. Rarely did I have the chance to start from scratch. Most of the time, there was already an existing structure on-premise, or only a part was already used in M365.</description>
+    </item>
+    
     <item>
       <title>Learning C# - My journey from low-code to mo-code</title>
       <link>https://michael365de.github.io/post/learning-csharp-part1/</link>
       <pubDate>Sat, 02 Sep 2023 01:33:43 +0200</pubDate>
       <author>mail@michael365.de (Michael Pucknat)</author>
       <guid>https://michael365de.github.io/post/learning-csharp-part1/</guid>
-      <description>So it begins I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right mood to start out seriously. Then I stumbled over this Tweet by Scott Hanselmann :
+      <description>So it begins&amp;hellip; I started (or tried to) start learning C# two weeks ago with some youtube videos, but somehow did not get into the right mood to start out seriously. Then I stumbled over this Tweet by Scott Hanselmann :
 I really like freecodecamp.org and tried it last year to learn some javascript. In combination with content from Microsoft Learn this seems like a great way to finally start digging into C#.</description>
     </item>
     

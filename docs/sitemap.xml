@@ -3,13 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://michael365de.github.io/</loc>
-    <lastmod>2023-09-02T01:33:43+02:00</lastmod>
+    <lastmod>2023-09-06T23:36:50+02:00</lastmod>
     <priority>0</priority>
   </url><url>
-    <loc>https://michael365de.github.io/post/learning-csharp-part1/</loc>
-    <lastmod>2023-09-02T01:33:43+02:00</lastmod>
-  </url><url>
     <loc>https://michael365de.github.io/post/</loc>
+    <lastmod>2023-09-06T23:36:50+02:00</lastmod>
+  </url><url>
+    <loc>https://michael365de.github.io/post/whyism365sohardtoimplement/</loc>
+    <lastmod>2023-09-06T23:36:50+02:00</lastmod>
+  </url><url>
+    <loc>https://michael365de.github.io/post/learning-csharp-part1/</loc>
     <lastmod>2023-09-02T01:33:43+02:00</lastmod>
   </url><url>
     <loc>https://michael365de.github.io/post/helloworld/</loc>
